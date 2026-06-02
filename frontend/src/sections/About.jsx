@@ -37,10 +37,10 @@ const Counter = ({ end, suffix = "" }) => {
 
 const About = ({ settings, founder }) => {
   const achievements = founder?.achievements || [
-    "Focus on building responsive & modern websites",
-    "Committed to clean code and prompt support",
-    "Learning and applying React.js, Django, & Vite",
-    "Using modern AI tools to accelerate development speed"
+    "Computer Science Student",
+    "Building real-world web apps with Python & Django",
+    "Designing responsive layouts using Tailwind CSS",
+    "Leveraging AI assistance for rapid learning & testing"
   ];
 
   return (
@@ -79,9 +79,9 @@ const About = ({ settings, founder }) => {
                 {/* Text overlay representing Pankaj Patel profile */}
                 <div className="z-10 text-left">
                   <h4 className="text-lg font-bold text-white">{founder?.name || "Pankaj Patel"}</h4>
-                  <p className="text-xs text-brand-400 font-semibold mb-3">{founder?.title || "Founder & Lead Developer"}</p>
+                  <p className="text-xs text-brand-400 font-semibold mb-3">{founder?.title || "Computer Science Student & Developer"}</p>
                   <p className="text-[11px] font-light text-slate-400 leading-relaxed border-t border-slate-800 pt-3">
-                    Bespoke web development from India to global markets.
+                    Passionate about software engineering and web development.
                   </p>
                 </div>
               </div>
@@ -136,27 +136,27 @@ const About = ({ settings, founder }) => {
           </div>
         </div>
 
-        {/* Vision & Mission Cards */}
+        {/* Learning Journey & Development Focus Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {/* Mission */}
+          {/* Learning Journey */}
           <div className="p-8 rounded-3xl glass-card text-left flex flex-col gap-4">
             <div className="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center shadow-inner">
               <FaRocket size={20} />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">Our Mission</h4>
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white">My Learning Journey</h4>
             <p className="text-sm font-light text-slate-500 dark:text-slate-400 leading-relaxed">
-              {settings?.mission || "To elevate global brands through cutting-edge web craftsmanship and custom backend systems."}
+              {settings?.mission || "Currently focused on improving backend development skills with Django, building full-stack projects, and exploring AI-assisted development workflows."}
             </p>
           </div>
 
-          {/* Vision */}
+          {/* Development Focus */}
           <div className="p-8 rounded-3xl glass-card text-left flex flex-col gap-4">
             <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shadow-inner">
               <FaEye size={20} />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white">Our Vision</h4>
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white">Development Focus</h4>
             <p className="text-sm font-light text-slate-500 dark:text-slate-400 leading-relaxed">
-              {settings?.vision || "To establish SiteeForgeStudio as the worldwide standard for premium, high-converting digital products."}
+              {settings?.vision || "Dedicated to building clean, well-documented, and responsive web applications while studying computer science principles."}
             </p>
           </div>
         </div>

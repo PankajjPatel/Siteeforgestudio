@@ -5,7 +5,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const Projects = ({ projects }) => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const categories = ["All", "Full Stack", "Frontend", "Backend", "AI"];
+  const categories = ["All", "Web Application", "Website"];
 
   // Mapping dynamic categories to user filters
   const getFilteredProjects = () => {
@@ -26,7 +26,7 @@ const Projects = ({ projects }) => {
             Our Work
           </h2>
           <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
-            Recent Ventures & Client Projects Successfully Built
+            Featured Projects
           </h3>
           <div className="h-1 w-20 bg-brand-600 mx-auto mt-4 rounded-full"></div>
         </div>

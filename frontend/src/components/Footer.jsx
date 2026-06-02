@@ -79,20 +79,20 @@ const Footer = ({ settings, socialLinks }) => {
           <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-6">Quick Links</h3>
           <div className="flex flex-col gap-3 text-sm">
             <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="hover:text-white transition-colors">Home</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="hover:text-white transition-colors">About Founder</a>
-            <a href="#services" onClick={(e) => handleLinkClick(e, '#services')} className="hover:text-white transition-colors">Services Grid</a>
-            <a href="#portfolio" onClick={(e) => handleLinkClick(e, '#portfolio')} className="hover:text-white transition-colors">Client Projects</a>
+            <a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="hover:text-white transition-colors">About Me</a>
+            <a href="#services" onClick={(e) => handleLinkClick(e, '#services')} className="hover:text-white transition-colors">Skills & Stack</a>
+            <a href="#portfolio" onClick={(e) => handleLinkClick(e, '#portfolio')} className="hover:text-white transition-colors">Featured Projects</a>
           </div>
         </div>
 
-        {/* Process & Solutions */}
+        {/* Stack */}
         <div>
-          <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-6">Solutions</h3>
+          <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-6">Focus Stack</h3>
           <div className="flex flex-col gap-3 text-sm">
-            <span className="hover:text-white cursor-default">Business Websites</span>
-            <span className="hover:text-white cursor-default">Custom React Development</span>
-            <span className="hover:text-white cursor-default">Django Secure APIs</span>
-            <span className="hover:text-white cursor-default">Website Optimization</span>
+            <span className="hover:text-white cursor-default">Python & Django</span>
+            <span className="hover:text-white cursor-default">HTML5 & Tailwind CSS</span>
+            <span className="hover:text-white cursor-default">MySQL & SQL Databases</span>
+            <span className="hover:text-white cursor-default">Git & Version Control</span>
           </div>
         </div>
 

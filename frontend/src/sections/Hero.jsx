@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaCalendarCheck } from 'react-icons/fa';
+import { FaArrowRight, FaDownload } from 'react-icons/fa';
 import logoImg from '../assets/logo.png';
 
 
 const Hero = ({ settings, founder }) => {
-  const roles = founder?.roles || ["Portfolio Websites", "Business Websites", "Landing Pages", "Website Maintenance"];
+  const roles = founder?.roles || ["Python • Django • Web Development", "Building Modern Web Applications"];
   
   // Custom Typewriter logic
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -126,9 +126,23 @@ const Hero = ({ settings, founder }) => {
             </a>
 
             <a
+              href={settings?.resume || "#"}
+              onClick={(e) => {
+                if (!settings?.resume) {
+                  e.preventDefault();
+                  alert("Resume download mocked! In production, this button will download your actual PDF resume.");
+                }
+              }}
+              className="flex items-center gap-2 px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-white/10 dark:hover:bg-white/15 dark:text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift"
+            >
+              <FaDownload size={14} />
+              Download Resume
+            </a>
+
+            <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white dark:bg-white/10 dark:hover:bg-white/15 dark:text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift"
+              className="flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift"
             >
               Contact Me
             </a>

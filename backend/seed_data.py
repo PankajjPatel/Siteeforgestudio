@@ -33,24 +33,24 @@ def seed():
     # 2. Site Settings
     settings = SiteSettings.objects.create(
         title="SiteeForgeStudio",
-        tagline="Modern websites and web applications built with React, Django, and modern web technologies.",
-        email="pankaj@siteeforgestudio.com",
+        tagline="Modern web applications and websites built with Python, Django, and modern web technologies.",
+        email="siteeforgestudio@gmail.com",
         phone="",
         whatsapp_number="",
         address="India",
         about_text=(
-            "SiteeForgeStudio is an independent web development studio founded by Pankaj Patel, "
-            "focused on building modern websites and web applications for businesses and individuals."
+            "SiteeForgeStudio is an independent web development portfolio founded by Pankaj Patel, "
+            "focused on building modern web applications and websites."
         ),
-        mission="To build clean, modern, and highly responsive websites that help small businesses and individuals establish a strong digital presence.",
-        vision="To deliver premium digital products that are budget-friendly, high-quality, and easy to maintain.",
+        mission="Currently focused on improving backend development skills with Django, building full-stack projects, and exploring AI-assisted development workflows.",
+        vision="To build a professional online presence and highlight real-world development work.",
         why_choose_us=[
-            "Modern Design: Clean layouts, beautiful animations, and professional styling.",
-            "Responsive Layouts: Mobile-first responsive grids that scale perfectly across all screens.",
-            "Affordable Pricing: Transparent and beginner-friendly rates tailored for individuals & small businesses.",
-            "Clean Code: Lightweight React frontends and optimized Django backend systems.",
-            "SEO Optimization: Semantic HTML5 elements and best practice meta tags for search visibility.",
-            "Direct Communication: Work directly with the founder for swift updates and personal project support."
+            "Modern Web Tech: Responsive layouts crafted with HTML5 and Tailwind CSS.",
+            "Clean Backend Logic: Secure database integration and clean code structures with Python & Django.",
+            "Relational Databases: Well-structured database queries and management using MySQL & SQL.",
+            "Version Control: Safe code deployments, issue tracking, and version history using Git and GitHub.",
+            "AI Integration: Leveraging tools like ChatGPT, Gemini, and Claude for faster learning and code testing.",
+            "Continuous Study: Constantly developing real-world academic & hobby projects to expand engineering skills."
         ]
     )
     print("Site Settings seeded.")
@@ -58,35 +58,34 @@ def seed():
     # 3. Founder
     founder = Founder.objects.create(
         name="Pankaj Patel",
-        title="Founder & Freelance Web Developer",
+        title="Computer Science Student & Developer",
         bio=(
-            "I am Pankaj Patel, a web developer passionate about building modern and responsive websites. "
-            "I am continuously learning new technologies and working on real-world projects to improve my skills "
-            "and help clients establish their online presence."
+            "I am Pankaj Patel, a Computer Science student passionate about web development and software engineering. "
+            "I enjoy building web applications using Python, Django, HTML, Tailwind CSS, and MySQL. "
+            "I actively use modern AI-assisted development tools to accelerate learning, improve productivity, "
+            "and enhance development workflows while continuously building real-world projects."
         ),
         achievements=[
-            "Focus on building responsive & modern websites",
-            "Committed to clean code and prompt support",
-            "Learning and applying React.js, Django, & Vite",
-            "Using modern AI tools to accelerate development speed"
+            "Computer Science Student",
+            "Building real-world web apps with Python & Django",
+            "Designing responsive layouts using Tailwind CSS",
+            "Leveraging AI assistance for rapid learning & testing"
         ],
         roles=[
-            "Portfolio Websites",
-            "Business Websites",
-            "Landing Pages",
-            "Website Maintenance"
+            "Python • Django • Web Development",
+            "Building Modern Web Applications"
         ]
     )
     print("Founder details seeded.")
 
     # 4. Services
     services_data = [
-        {"title": "Portfolio Websites", "icon_name": "FaUserTie", "description": "Sleek, personal portfolio systems designed to showcase your skills, achievements, and work."},
-        {"title": "Business Websites", "icon_name": "FaGlobe", "description": "Modern, responsive websites built to establish a professional digital presence for small businesses."},
-        {"title": "Landing Pages", "icon_name": "FaRocket", "description": "Focused, high-converting single-page layouts optimized for marketing campaigns and lead capture."},
-        {"title": "React Frontend Development", "icon_name": "FaReact", "description": "Interactive, highly dynamic user interfaces built with React, Vite, and Tailwind CSS."},
-        {"title": "Django Backend Development", "icon_name": "FaServer", "description": "Secure, lightweight database systems, secure admin panels, and custom backend API logic with Django."},
-        {"title": "Website Maintenance", "icon_name": "FaTachometerAlt", "description": "Regular website monitoring, minor styling tweaks, performance tuning, and content updates."}
+        {"title": "Python & Django Apps", "icon_name": "FaPython", "description": "Full-stack web systems built using Django's secure, robust web framework."},
+        {"title": "Responsive Web Design", "icon_name": "FaHtml5", "description": "Modern, lightweight, and responsive user interfaces created using HTML5 and Tailwind CSS."},
+        {"title": "Database Management", "icon_name": "FaDatabase", "description": "Designing relational database schemas and writing optimized queries using MySQL and SQL."},
+        {"title": "Git & Version Control", "icon_name": "FaGithub", "description": "Using Git branching strategies, pull requests, and GitHub repositories for clean collaborative workflows."},
+        {"title": "AI-Assisted Workflows", "icon_name": "FaRobot", "description": "Employing LLMs like Claude, Gemini, and ChatGPT to optimize, test, and document code structures."},
+        {"title": "Academic & Full Stack Projects", "icon_name": "FaLaptopCode", "description": "Building real-world portfolio case studies to solve engineering issues and track queue lines."}
     ]
     for i, s in enumerate(services_data):
         Service.objects.create(title=s["title"], icon_name=s["icon_name"], description=s["description"], order=i)
@@ -94,25 +93,28 @@ def seed():
 
     # 5. Skills
     skills_data = [
+        # Programming
+        {"name": "Python", "category": "Programming", "proficiency": 85, "icon_name": "FaPython"},
+        {"name": "SQL", "category": "Programming", "proficiency": 80, "icon_name": "FaDatabase"},
+
         # Frontend
-        {"name": "React.js", "category": "Frontend", "proficiency": 85, "icon_name": "RiReactjsLine"},
-        {"name": "Tailwind CSS", "category": "Frontend", "proficiency": 90, "icon_name": "SiTailwindcss"},
-        {"name": "JavaScript (ES6+)", "category": "Frontend", "proficiency": 80, "icon_name": "IoLogoJavascript"},
-        {"name": "HTML5 / CSS3", "category": "Frontend", "proficiency": 90, "icon_name": "FaHtml5"},
+        {"name": "HTML5", "category": "Frontend", "proficiency": 90, "icon_name": "FaHtml5"},
+        {"name": "Tailwind CSS", "category": "Frontend", "proficiency": 85, "icon_name": "SiTailwindcss"},
         
         # Backend
         {"name": "Django", "category": "Backend", "proficiency": 80, "icon_name": "DiDjango"},
-        {"name": "Python", "category": "Backend", "proficiency": 85, "icon_name": "FaPython"},
 
         # Database
-        {"name": "SQLite", "category": "Database", "proficiency": 85, "icon_name": "SiSqlite"},
+        {"name": "MySQL", "category": "Database", "proficiency": 80, "icon_name": "SiMysql"},
 
         # Tools
-        {"name": "Git & GitHub", "category": "Tools", "proficiency": 80, "icon_name": "FaGithub"},
-        {"name": "VS Code", "category": "Tools", "proficiency": 90, "icon_name": "SiVisualstudiocode"},
+        {"name": "Git", "category": "Tools", "proficiency": 85, "icon_name": "FaGitAlt"},
+        {"name": "GitHub", "category": "Tools", "proficiency": 90, "icon_name": "FaGithub"},
 
-        # AI & Automation
-        {"name": "AI Tool Integrations", "category": "AI & Automation", "proficiency": 90, "icon_name": "FaRobot"}
+        # AI-Assisted Development
+        {"name": "ChatGPT", "category": "AI-Assisted Development", "proficiency": 90, "icon_name": "FaRobot"},
+        {"name": "Gemini", "category": "AI-Assisted Development", "proficiency": 90, "icon_name": "FaBrain"},
+        {"name": "Claude", "category": "AI-Assisted Development", "proficiency": 90, "icon_name": "FaBrain"}
     ]
     for sk in skills_data:
         Skill.objects.create(name=sk["name"], category=sk["category"], proficiency=sk["proficiency"], icon_name=sk["icon_name"])
@@ -122,9 +124,9 @@ def seed():
     projects_data = [
         {
             "title": "Smart Queue Management System",
-            "description": "An interactive web system helping businesses track customer queues dynamically. Features queue updates, real-time client notification dashboard, and beautiful charts.",
+            "description": "A web-based Smart Queue Management System developed for Hospitals, Banks, and Colleges. The system enables appointment booking, digital token generation, and live queue tracking to reduce waiting time and improve service efficiency.",
             "category": "Web Application",
-            "technologies": ["React.js", "Django", "Django REST Framework", "SQLite", "Tailwind CSS"],
+            "technologies": ["Java", "Spring Boot", "MySQL", "HTML", "CSS", "JavaScript"],
             "github_link": "https://github.com/PankajPatel/smart-queue-management",
             "live_demo_link": "https://queue.siteeforgestudio.com",
             "featured": True,
@@ -132,7 +134,7 @@ def seed():
         },
         {
             "title": "Portfolio Website",
-            "description": "The responsive and modern developer portfolio website and founder portal itself. Built using React, Vite, Tailwind CSS, Framer Motion, and Django REST API.",
+            "description": "Personal portfolio website showcasing technical skills, projects, and development journey. Built to provide a professional online presence and highlight real-world development work.",
             "category": "Website",
             "technologies": ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Django", "SQLite"],
             "github_link": "https://github.com/PankajPatel/siteeforge-studio",

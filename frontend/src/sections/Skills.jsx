@@ -5,7 +5,7 @@ import Icon from '../components/Icon';
 const Skills = ({ skills }) => {
   const [activeCategory, setActiveCategory] = useState("Frontend");
 
-  const categories = ["Frontend", "Backend", "Database", "Tools", "AI & Automation"];
+  const categories = ["Programming", "Frontend", "Backend", "Database", "Tools", "AI-Assisted Development"];
 
   // Filter skills based on chosen category
   const filteredSkills = skills?.filter(skill => skill.category === activeCategory) || [];
@@ -20,7 +20,7 @@ const Skills = ({ skills }) => {
             Our Stack
           </h2>
           <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
-            Technical Proficiencies & Tools We Master
+            Technical Skills & Learning Stack
           </h3>
           <div className="h-1 w-20 bg-brand-600 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -68,8 +68,8 @@ const Skills = ({ skills }) => {
                         {skill.name}
                       </span>
                     </div>
-                    <span className="text-sm font-semibold text-brand-600 dark:text-brand-400">
-                      {skill.proficiency}%
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                      {skill.proficiency >= 90 ? "Intermediate" : "Learning & Building"}
                     </span>
                   </div>
 

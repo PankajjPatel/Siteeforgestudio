@@ -37,7 +37,6 @@ const Navbar = ({ settings, logoUrl = "/src/assets/logo.png" }) => {
     { name: 'Services', href: '#services' },
     { name: 'Skills', href: '#skills' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Pricing', href: '#pricing' },
     { name: 'Process', href: '#process' },
     { name: 'Contact', href: '#contact' },
   ];

@@ -7,7 +7,6 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Process from './sections/Process';
 import WhyChooseUs from './sections/WhyChooseUs';
-import Pricing from './sections/Pricing';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
@@ -89,7 +88,6 @@ function App() {
         <Projects projects={data.projects} />
         <Process />
         <WhyChooseUs />
-        <Pricing />
         <Testimonials testimonials={data.testimonials} />
         <Contact settings={data.settings} />
       </main>
