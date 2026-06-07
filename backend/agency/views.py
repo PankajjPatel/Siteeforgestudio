@@ -1,5 +1,8 @@
 from rest_framework import viewsets, generics, status
 from rest_framework.response import Response
+from django.core.mail import send_mail
+from django.conf import settings
+import logging
 from .models import (
     SiteSettings, Founder, Service, Skill, 
     Project, Testimonial, SocialLink, ContactMessage
@@ -9,6 +12,8 @@ from .serializers import (
     SkillSerializer, ProjectSerializer, TestimonialSerializer, 
     SocialLinkSerializer, ContactMessageSerializer
 )
+
+logger = logging.getLogger(__name__)
 
 class SiteSettingsViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = SiteSettings.objects.all()
@@ -104,3 +109,38 @@ class SocialLinkViewSet(viewsets.ReadOnlyModelViewSet):
 class ContactMessageCreateView(generics.CreateAPIView):
     queryset = ContactMessage.objects.all()
     serializer_class = ContactMessageSerializer
+
+    def perform_create(self, serializer):
+        instance = serializer.save()
+        
+        # Send email notification
+        try:
+            # Fetch recipient email from SiteSettings, fallback to seeded email or standard email
+            site_settings = SiteSettings.objects.first()
+            recipient_email = site_settings.email if site_settings and site_settings.email else 'siteeforgestudio@gmail.com'
+            
+            subject = f"New Contact Lead from {instance.name} - SiteeForgeStudio"
+            message = (
+                f"Hello,\n\n"
+                f"You have received a new contact / quote request on SiteeForgeStudio.\n\n"
+                f"--- Details ---\n"
+                f"Name: {instance.name}\n"
+                f"Email: {instance.email}\n"
+                f"Phone: {instance.phone or 'Not provided'}\n"
+                f"Service Required: {instance.service_required or 'Not specified'}\n"
+                f"Budget: {instance.budget or 'Not specified'}\n"
+                f"Message:\n{instance.message}\n\n"
+                f"Submitted at: {instance.created_at}\n\n"
+                f"Best regards,\nSiteeForgeStudio Notification System"
+            )
+            
+            send_mail(
+                subject=subject,
+                message=message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[recipient_email],
+                fail_silently=False,
+            )
+            logger.info(f"Email notification successfully sent to {recipient_email} for contact message from {instance.email}")
+        except Exception as e:
+            logger.error(f"Failed to send email notification for contact message from {instance.email}: {str(e)}")

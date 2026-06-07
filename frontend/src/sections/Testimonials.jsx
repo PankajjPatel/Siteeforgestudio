@@ -52,7 +52,7 @@ const Testimonials = ({ testimonials }) => {
           {/* Arrow Left */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 lg:-left-16 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 rounded-full flex items-center justify-center shadow-lg transition-transform focus:outline-none hover:scale-105"
+            className="absolute left-0 lg:-left-16 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 rounded-full hidden md:flex items-center justify-center shadow-lg transition-transform focus:outline-none hover:scale-105"
             aria-label="Previous Testimonial"
           >
             <FaChevronLeft size={14} />
@@ -116,7 +116,7 @@ const Testimonials = ({ testimonials }) => {
           {/* Arrow Right */}
           <button
             onClick={handleNext}
-            className="absolute right-0 lg:-right-16 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 rounded-full flex items-center justify-center shadow-lg transition-transform focus:outline-none hover:scale-105"
+            className="absolute right-0 lg:-right-16 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 rounded-full hidden md:flex items-center justify-center shadow-lg transition-transform focus:outline-none hover:scale-105"
             aria-label="Next Testimonial"
           >
             <FaChevronRight size={14} />

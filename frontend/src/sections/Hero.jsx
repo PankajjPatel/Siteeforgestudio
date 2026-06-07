@@ -91,7 +91,7 @@ const Hero = ({ settings, founder }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl font-semibold text-slate-700 dark:text-slate-300 h-10 mb-6 flex items-center"
+            className="text-xl md:text-2xl font-semibold text-slate-700 dark:text-slate-300 min-h-[2.5rem] md:h-10 mb-6 flex items-center flex-wrap"
           >
             <span className="mr-2 text-slate-500 font-light">Specializing in</span>
             <span className="text-brand-600 dark:text-brand-400 border-r-2 border-brand-500 pr-1 animate-pulse">
@@ -114,12 +114,12 @@ const Hero = ({ settings, founder }) => {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto"
           >
             <a
               href="#portfolio"
               onClick={(e) => handleScrollTo(e, '#portfolio')}
-              className="flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl shadow-xl shadow-brand-500/20 transition-all duration-300 hover-lift"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl shadow-xl shadow-brand-500/20 transition-all duration-300 hover-lift w-full sm:w-auto text-center"
             >
               View Projects
               <FaArrowRight size={14} />
@@ -133,7 +133,7 @@ const Hero = ({ settings, founder }) => {
                   alert("Resume download mocked! In production, this button will download your actual PDF resume.");
                 }
               }}
-              className="flex items-center gap-2 px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-white/10 dark:hover:bg-white/15 dark:text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-white/10 dark:hover:bg-white/15 dark:text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift w-full sm:w-auto text-center"
             >
               <FaDownload size={14} />
               Download Resume
@@ -142,7 +142,7 @@ const Hero = ({ settings, founder }) => {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, '#contact')}
-              className="flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white border border-slate-200/20 font-bold rounded-2xl transition-all duration-300 hover-lift w-full sm:w-auto text-center"
             >
               Contact Me
             </a>
@@ -157,7 +157,7 @@ const Hero = ({ settings, founder }) => {
           className="lg:col-span-5 flex justify-center z-10"
         >
           {/* Custom premium graphic node wrapper */}
-          <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full flex items-center justify-center bg-slate-950 border-4 border-brand-600 shadow-2xl glow-blue overflow-hidden animate-float">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full flex items-center justify-center bg-slate-950 border-4 border-brand-600 shadow-2xl glow-blue overflow-hidden animate-float">
             
             {/* Full-circle coder avatar cropped to hide bottom text */}
             <img 

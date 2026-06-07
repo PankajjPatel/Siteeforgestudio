@@ -64,7 +64,7 @@ const About = ({ settings, founder }) => {
           {/* Left Column - Portrait & Stats Card */}
           <div className="lg:col-span-5 relative flex justify-center">
             {/* Visual Glass Box Mocking Portrait image */}
-            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-3xl bg-gradient-to-tr from-brand-600 to-purple-600 p-[1.5px] shadow-2xl glow-blue">
+            <div className="relative w-full max-w-[280px] h-80 md:w-80 md:h-96 rounded-3xl bg-gradient-to-tr from-brand-600 to-purple-600 p-[1.5px] shadow-2xl glow-blue">
               <div className="w-full h-full bg-slate-950 rounded-[23px] overflow-hidden flex flex-col justify-end p-6 relative">
                 
                 {/* Tech background overlay */}
