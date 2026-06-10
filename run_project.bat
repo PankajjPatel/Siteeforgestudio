@@ -13,6 +13,7 @@ if not exist node_modules (
     call npm install
 )
 echo Building static assets...
+set VITE_BASE_PATH=/static/
 call npm run build
 if %ERRORLEVEL% neq 0 (
     echo [ERROR] Frontend build failed! Please check Vite configurations.
